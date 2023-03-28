@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+  
+  <div class="header">
+    <h2 class="dashboard">Dashboard</h2>
+    <p>Send help right away.</p>
+  </div>
+  
+  <div>
+    <form action="" id="contactForm">
+      <div class="alert">Done!</div>
+      
+      <div class="input_parent">
+      <div>
+        <input type="text" id="name" placeholder="Full Name....(optional)" />
+      </div>
+       
+      <div>
+        <input type="text" id="contactNo" placeholder="Contact Number.....(optional)" />
+      </div>
+      </div>
+
+      <div class="textBox">
+        <textarea id="msgContent" cols="30" rows="10" placeholder="I'm at room.....(required)"></textarea>
+      </div>
+
+      <div>
+        <button id="submit" type="submit">SEND HELP</button>
+      </div>
+    </form>
+  </div>
+  
+  <div class="QuickButtons_Label">
+   <h2>Quick Buttons</h2>
+   <p>You can click this buttons to quicken your input.</p>
+  </div>
+  
+  <div class="quickButtons">
+   <button id="addTextButton">I need help at</button>
+   <button id="addTextButton2">in the place</button>
+   <button id="addTextButton3">Hello, I need urgent help!</button>
+  </div>
+  
+  <div class="Location">
+   <h2>User Location</h2>
+     <p id="latitude"></p>
+     <p id="longitude"></p>
+  </div>
+  
+  <script>
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+  var latitude = position.coords.latitude;
+  var longitude = position.coords.longitude;
+
+  document.getElementById("latitude").innerHTML = "Latitude: " + latitude;
+  document.getElementById("longitude").innerHTML = "Longitude: " + longitude;
+  }, function(error) {
+          // Handle errors
+        });
+  } else {
+        // Geolocation is not supported
+      }
+  </script>
+  
+  <a href="index.html"><button id="logout" type="submit">Log Out</button></a>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+  <script  src="dashboard.js"></script>
+</body>
+
+</html>

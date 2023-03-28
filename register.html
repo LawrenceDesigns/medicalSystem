@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Register</title>
+        <link rel="stylesheet" type="text/css" href="register.css">
+    </head>
+
+<body>
+  
+  <div id="alert"></div>
+
+  <div class="div-1">
+    <h1>Get Started</h1>
+    <p>Register your account now.</p>
+  </div>
+
+  <div class="div-2">
+    <!---Inputs--->
+    <h2>Full Name</h2>
+    <input type="text" id="full_name" placeholder="Name">
+    <br>
+    <h2>Email</h2>
+    <input type="email" id="email" placeholder="Email">
+    <br>
+    <h2>Password</h2>
+    <input type="password" id="password" placeholder="Password">
+  </div>
+  
+  <div class="btn">
+    <button onclick="register()" id="register">Register</button>
+  </div>
+  
+  <div class="anchor">
+  <p>Already have an account? <a href="login.html">Login</a></p>
+  </div>
+  
+</body>
+
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src="register.js"></script>
+
+</html>

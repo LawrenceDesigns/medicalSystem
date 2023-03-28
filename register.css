@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+body {
+  background-color: #1f2833;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 30vh;
+}
+
+#alert {
+  display: none;
+}
+
+h1 {
+  font-size: 5vh;
+  margin: 0.2vh 0;
+}
+
+p {
+  font-size: 2vh;
+}
+
+h2 {
+  font-size: 3.5vh;
+  margin-bottom: 0.2vh;
+}
+
+#full_name, #email, #password {
+  padding: 2vh 3vw;
+  border: none;
+  border-radius: 0.5em;
+  background-color: white;
+  margin: 0.5vh 0 2vh 0;
+  width: 70vw;
+  color: #1f2833;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2vh;
+}
+
+#full_name::placeholder {
+  font-size: 2vh;
+}
+
+#email::placeholder {
+  font-size: 2vh;
+}
+
+#password::placeholder {
+  font-size: 2vh;
+}
+
+#register {
+  background-color: white;
+  color: #1f2833;
+  border: none;
+  padding: 3vh 3vw;
+  margin: 0;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  font-size: 6vw;
+  cursor: pointer;
+  border-radius: 0.15em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  width: 65vw;
+}
+
+.anchor {
+  min-height: 10vh;
+}
+
+.btn {
+  min-height: 15vh;
+}
+
+.div-1 {
+  margin: 3vh 4vw;
+  background-color: #161c24;
+  border-radius: 2vw;
+}
